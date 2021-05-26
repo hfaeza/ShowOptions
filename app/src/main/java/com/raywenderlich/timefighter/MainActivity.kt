@@ -13,15 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-    }
-    fun options(list: MainActivity)
-    {
-        val url = Intent(this , Activity2::class.java)
-        url.putExtra("url", "https://hub.dummyapis.com/ImagesList?text=Test&noofimages=10&height=120&width=120" )
-        startActivity(url)
+        val showOption = findViewById<Button>(R.id.showoptions)
+        showOption.setOnClickListener{sendURL()}
     }
 
-    fun sendURL(view: View)
+    private fun sendURL()
     {
         val url="https://hub.dummyapis.com/ImagesList?text=Test&noofimages=10&height=120&width=120"
         url.toString()

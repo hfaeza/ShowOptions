@@ -33,7 +33,7 @@ class Activity2 : AppCompatActivity()
                     response.getString(it)
                 }
                 val imagesList = findViewById<ListView>(R.id.imagelist)
-                val listAdapt = ArrayAdapter(this, android.R.layout.simple_list_item_1, urls)
+                val listAdapt = custom_adapt(this, urls)
                 imagesList.adapter = listAdapt
             },
             {})
