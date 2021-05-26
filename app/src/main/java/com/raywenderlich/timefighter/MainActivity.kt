@@ -19,10 +19,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun sendURL()
     {
-        val url="https://hub.dummyapis.com/ImagesList?text=Test&noofimages=10&height=120&width=120"
-        url.toString()
         val intent = Intent(this, Activity2::class.java)
-        intent.putExtra(Activity2.URL_EXTRA, url)
+        intent.putExtra("url", "https://hub.dummyapis.com/ImagesList?text=Test&noofimages=10&height=120&width=120")
         startActivity(intent)
     }
 }

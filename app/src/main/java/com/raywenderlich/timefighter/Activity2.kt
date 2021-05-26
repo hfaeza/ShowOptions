@@ -16,13 +16,11 @@ import java.net.URL
 
 class Activity2 : AppCompatActivity()
 {
-    companion object{
-        const val URL_EXTRA = "url_extra"
-    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_2)
-        val url = intent.getStringExtra(URL_EXTRA)
+        val url = intent.getStringExtra("url")
         val queue = Volley.newRequestQueue(this)
 
         // Request a string response from the provided URL.

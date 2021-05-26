@@ -36,7 +36,7 @@ class custom_adapt(private val context: Context,
         // Get view for row item
         val rowView = inflater.inflate(R.layout.img, parent, false)
         Glide.with(parent.context).load(dataSource[position])
-            .into(rowView.findViewById(R.id.img1));
+            .into(rowView.findViewById(R.id.imageView));
         return rowView
     }
                    }
